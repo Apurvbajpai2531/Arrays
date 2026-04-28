@@ -47,3 +47,6 @@ static boolean isSorted(int arr[]) {
 
     return true;
 }
+
+
+// Array 
