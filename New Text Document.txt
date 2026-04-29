@@ -49,4 +49,53 @@ static boolean isSorted(int arr[]) {
 }
 
 
-// Array 
+// Union of two array
+
+  //first array
+ for (int i = 0; i < a.length; i++) {
+            if (!list.contains(a[i])) {
+                list.add(a[i]);
+            }
+        }
+
+        // second array
+        for (int i = 0; i < b.length; i++) {
+            if (!list.contains(b[i])) {
+                list.add(b[i]);
+            }
+        }
+
+        // print
+        for (int x : list) {
+            System.out.print(x + " ");
+        }
+
+
+
+// Intersection of the arary 
+
+
+static void intersection(int a[], int b[]) {
+      
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < a.length; i++) {
+
+            // check if present in b
+            for (int j = 0; j < b.length; j++) {
+
+                if (a[i] == b[j]) {
+
+                    // avoid duplicates
+                    if (!list.contains(a[i])) {
+                        list.add(a[i]);
+                    }
+                    break;
+                }
+            }
+        }
+
+        for (int x : list) {
+            System.out.print(x + " ");
+        }
+    }
