@@ -39,3 +39,41 @@ class Solution {
         return new int[]{-1, -1};
     }
 }
+
+
+
+
+// Sort Array of 0 1 and 2
+
+class Solution {
+    public void sortColors(int[] nums) {
+        int n = nums.length;
+
+        int c=0,c1=0,c2=0;
+
+        for(int i=0;i<n;i++)
+
+        {
+
+            if (nums[i]==0)
+            c++;
+            else if (nums[i]==1)
+            c1++;
+            else 
+            c2++;
+        }
+
+        for(int i=0;i<c;i++)
+        {
+            nums[i]=0;
+        }
+        for(int i=c;i<c+c1;i++)
+        {
+            nums[i]=1;
+        }
+        for(int i=c+c1;i<n;i++)
+        {
+            nums[i]=2;
+        }
+    }
+}
